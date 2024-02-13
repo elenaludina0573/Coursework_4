@@ -17,3 +17,16 @@ class Vacancy:
                f'зарплата до: {self.salary_to}\n' \
                f'тип занятости: {self.employment}\n' \
                f'ссылка на вакансию: {self.url}\n'
+
+    def to_dict(self):
+        """
+        Возвращает вакансию в виде словаря
+        """
+        return {
+            'vacancy_title': self.vacancy_title,
+            'town': self.town,
+            'salary_from': self.salary_from,
+            'salary_to': self.salary_to,
+            'employment': self.employment,
+            'url': self.url
+        }
