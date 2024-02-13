@@ -30,3 +30,17 @@ class Vacancy:
             'employment': self.employment,
             'url': self.url
         }
+
+    @staticmethod
+    def from_dict(vacancy_dict):
+        """
+        Возвращает вакансию в виде списка
+        """
+        return Vacancy(
+            vacancy_dict['vacancy_title'],
+            vacancy_dict['town'],
+            vacancy_dict['salary_from'],
+            vacancy_dict['salary_to'],
+            vacancy_dict['employment'],
+            vacancy_dict['url']
+        )
