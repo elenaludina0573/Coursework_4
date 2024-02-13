@@ -45,6 +45,11 @@ class Vacancy:
             vacancy_dict['url']
         )
 
+    def __lt__(self, other):
+        if not isinstance(other, Vacancy):
+            raise TypeError('Вакансию можно сравнивать только с вакансией')
+        return self.salary_from < other.salary_from
+
 
 class Vacancies:
     """ Обработка списка вакансий"""
