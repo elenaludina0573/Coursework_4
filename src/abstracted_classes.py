@@ -21,5 +21,3 @@ class JSONABCSaver(ABC):
     @abstractmethod
     def file_reader(self):
         pass
-
-
